@@ -2,17 +2,19 @@
 layout: home
 
 sites:
+  - title: Aivas (Advancomsol)
+    url: "/aivas"
   - title: Private Scouts
     url: "/ps"
 
 ---
 
-<div style="width:100%;height:150px;background-color:darkcyan;border-radius:0.25rem 0.25rem 0px 0px;display:flex;align-items:center;justify-content:center;cursor:default;">
+<div style="width:100%;height:150px;background-color:darkcyan;border-radius:0.25rem 0.25rem 0px 0px;display:flex;align-items:center;justify-content:center;cursor:default;margin-bottom:1rem;">
 <h1>Legacy Sites</h1>
 </div>
 
 {% for siteitem in page.sites %}
-<div style="text-align:center;width:80%;margin:1rem auto;">
+<div style="text-align:center;width:80%;margin:0.75rem auto;">
 <a href="{{ site.baseurl }}{{ siteitem.url }}">
 <div class="hover" style="padding:1rem 2rem;border-radius:0.25rem;">{{ siteitem.title }}</div>
 </a>

@@ -1,0 +1,59 @@
+---
+aivasposts:
+  - title: "Update Windows XP"
+    url: "/winxp"
+  - title: "Buying a New Computer"
+    url: "/pc"
+  - title: "ES File Explorer"
+    url: "/es"
+  
+
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advancomsol / Aivas</title>
+  <style>
+    body {
+      margin: 0px;
+      padding: 0px;
+    }
+    .container {
+      color: #111;
+      min-height:100vh;
+      text-align: center;
+      background-image: repeating-linear-gradient(135deg, hsla(210,79%,75%,0.05) 0px, hsla(210,79%,75%,0.05) 1px,transparent 1px, transparent 11px,hsla(210,79%,75%,0.05) 11px, hsla(210,79%,75%,0.05) 12px,transparent 12px, transparent 32px),repeating-linear-gradient(45deg, hsla(210,79%,75%,0.05) 0px, hsla(210,79%,75%,0.05) 1px,transparent 1px, transparent 11px,hsla(210,79%,75%,0.05) 11px, hsla(210,79%,75%,0.05) 12px,transparent 12px, transparent 32px),repeating-linear-gradient(90deg, hsla(210,79%,75%,0.05) 0px, hsla(210,79%,75%,0.05) 1px,transparent 1px, transparent 11px,hsla(210,79%,75%,0.05) 11px, hsla(210,79%,75%,0.05) 12px,transparent 12px, transparent 32px),repeating-linear-gradient(0deg, hsla(210,79%,75%,0.05) 0px, hsla(210,79%,75%,0.05) 1px,transparent 1px, transparent 11px,hsla(210,79%,75%,0.05) 11px, hsla(210,79%,75%,0.05) 12px,transparent 12px, transparent 32px),linear-gradient(90deg, rgb(61, 167, 151),rgb(81, 98, 185));
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div style="padding-top:2rem"></div>
+    <div style="margin:0px auto;width:80%;height:100px;border:0.5rem solid darkmagenta;border-radius:1rem;display:flex;align-items:center;justify-content:center;cursor:default;margin-bottom:1rem;">
+      <div>
+        <h1 style="margin:0;padding:0;">Aivas Tech</h1>
+        <h4 style="margin:0;padding:0;">Formerly Advancomsol</h4>
+      </div>
+    </div>
+    <p>This is a basic homepage created to store Aivas Tech's archived blog posts.</p>
+
+    <div style="text-align:center;width:80%;margin:0px auto;padding:2rem 0px;display:grid;grid-template-columns:repeat(2,1fr);grid-gap:1rem;">
+    {% for aivasitem in page.aivasposts %}
+      <a href="{{ site.baseurl }}/aivas{{ aivasitem.url }}" style="text-decoration:none;color:indigo;">
+        <div style="padding:1rem 2rem;border-radius:0.25rem;background-color:powderblue;">
+          <h3>{{ aivasitem.title }}</h3>
+          <p>-> {{ aivasitem.url }}</p>
+        </div>
+      </a>
+    {% endfor %}
+    </div>
+
+    <div style="padding-top:2rem;">
+      <a href="{{ site.url }}{{ site.baseurl }}/" style="color:indigo;">&lt;- Back to Legacy Home</a>
+    </div>
+
+  </div>
+</body>
+</html>
