@@ -4,6 +4,8 @@ layout: home
 sites:
   - title: Aivas (Advancomsol)
     url: "/aivas"
+  - title: Cleanpaster
+    url: "/cleanpaster"
   - title: Private Scouts
     url: "/ps"
 

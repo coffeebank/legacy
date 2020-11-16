@@ -1,0 +1,37 @@
+<div style="width:100%;background-color:teal;color:#eee;padding:1rem 0px;">
+  <div class="aivashead">
+    <a href="{{ site.baseurl }}/" style="text-decoration:none;color:powderblue;">
+      <div style="border-radius:0.25rem;">
+        <strong style="font-size:1rem;">&lt; Back to Legacy Home</strong>
+      </div>
+    </a>
+    {% for aivasitem in site.data.aivas.aivasposts %}
+    <a href="{{ site.baseurl }}/aivas{{ aivasitem.url }}" style="text-decoration:none;color:powderblue;">
+      <div style="border-radius:0.25rem;border:0.25rem solid powderblue;">
+        <strong style="font-size:1rem;">{{ aivasitem.title }}</strong>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</div>
+
+<style>
+  .aivashead {
+    display:grid;
+    grid-template-columns:repeat(4,20%);
+    padding:0px 5%;
+    gap:1rem;
+  }
+  .aivashead > a > div {
+    padding:1rem 1.5rem;
+  }
+  @media screen and (max-width: 600px) {
+    .aivashead {
+      grid-template-columns:100%;
+      gap:0.5rem;
+    }
+    .aivashead > a > div {
+      padding:0.75rem 1rem;
+    }
+  }
+</style>
