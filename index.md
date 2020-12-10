@@ -6,6 +6,8 @@ sites:
     url: "/aivas"
   - title: Cleanpaster
     url: "/cleanpaster"
+  - title: Explarcade
+    url: "/explarcade"
   - title: Private Scouts
     url: "/ps"
 
