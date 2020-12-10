@@ -1,4 +1,11 @@
 ---
+
+changes:
+  - date: 11/10/2020
+    title: Migrated site to GitHub
+    list:
+      - https://privatescouts.webs.com will stop working <a href="https://support.webs.com/hc/en-us/articles/360048554451" style="color:#ccc;">after March 31, 2021</a>
+
 ---
 <!DOCTYPE html>
 <html
@@ -666,6 +673,15 @@
                   <div class="webs-container webs-module-text">
                     <div class=webs-text>
                       <p>
+                      {% for changes in page.changes %}
+                      <ul class=style-disc>
+                        <li><span class=wz-bold>{{ changes.date }} - </span>{{ changes.title }}<span
+                            class=wz-bold></span>
+                          {% if changes.list %}<ul>
+                            {% for changes2 in changes.list %}<li><span class=wz-italic>{{ changes2 }}</span>{% endfor %}
+                          </ul>{% endif %}
+                      </ul>
+                      {% endfor %}
                       <ul class=style-disc>
                         <li><span class=wz-bold>03/27/2020 - </span>All Private Scouts services have been retired.<span
                             class=wz-bold></span>
